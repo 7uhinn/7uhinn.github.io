@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C /Users/7uhinn/Documents/Development/Projects/7uhinn.github.io show HEAD:LICENSE)",
+      "Bash(git -C /Users/7uhinn/Documents/Development/Projects/7uhinn.github.io show HEAD:README.md)"
+    ]
+  }
+}
