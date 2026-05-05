@@ -384,6 +384,11 @@
       padding-top: 0.75rem;
     }
 
+    .edu-degree strong, .edu-note strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
     /* ── CERTIFICATIONS ── */
     .cert-list {
       list-style: none;
@@ -408,15 +413,19 @@
       font-size: 0.86rem;
       font-weight: 500;
       color: var(--text);
-      text-decoration: none;
     }
-    a.cert-name:hover { color: var(--accent); text-decoration: underline; }
+
+    .cert-right {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-shrink: 0;
+    }
 
     .cert-meta {
       font-size: 0.76rem;
       color: var(--muted);
       white-space: nowrap;
-      flex-shrink: 0;
     }
 
     .cert-active {
@@ -425,10 +434,24 @@
       font-weight: 600;
       color: #065f46;
       background: #d1fae5;
-      padding: 0.1rem 0.4rem;
+      padding: 0.15rem 0.5rem;
       border-radius: 3px;
-      margin-left: 0.4rem;
-      vertical-align: middle;
+    }
+
+    .cert-verify {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: var(--accent);
+      background: var(--accent-light);
+      padding: 0.15rem 0.5rem;
+      border-radius: 3px;
+      text-decoration: none;
+      transition: background 0.15s, color 0.15s;
+    }
+    .cert-verify:hover {
+      background: var(--accent);
+      color: #fff;
     }
 
     /* ── FOOTER ── */
@@ -844,9 +867,9 @@
           <span class="edu-school">University of California, Berkeley</span>
           <span class="edu-location">Berkeley, CA</span>
         </div>
-        <p class="edu-degree">Visiting Scholar, Startup Semester &middot; Data-X (AI), Technology Entrepreneurship &middot; GPA: 3.7/4.0</p>
+        <p class="edu-degree">Visiting Scholar, Startup Semester &middot; Data-X (AI), Technology Entrepreneurship &middot; <strong>GPA: 3.7/4.0</strong></p>
         <p class="edu-year">2018</p>
-        <p class="edu-note">Built a real estate price prediction ML model using NYC Open Data as part of the Data-X (AI) program &mdash; applied regression and feature engineering on government datasets, achieving ~68% accuracy, competitive with benchmarks at the time.</p>
+        <p class="edu-note">Built a real estate price prediction ML model using NYC Open Data as part of the <strong>Data-X (AI)</strong> program &mdash; applied regression and feature engineering on government datasets, achieving <strong>~68% accuracy</strong>, competitive with benchmarks at the time.</p>
       </div>
 
       <div class="edu-card">
@@ -854,9 +877,9 @@
           <span class="edu-school">SRM University, AP</span>
           <span class="edu-location">Amaravati, India</span>
         </div>
-        <p class="edu-degree">Bachelor of Technology (B.Tech.), Computer Science &middot; CGPA: 9.53/10</p>
+        <p class="edu-degree">Bachelor of Technology (B.Tech.), Computer Science &middot; <strong>CGPA: 9.53/10</strong></p>
         <p class="edu-year">2017 &ndash; 2021</p>
-        <p class="edu-note">TA across 3 courses (Data Science, Algorithms, Statistics); co-founded Ennovab and conducted AI/ML research at Next Tech Lab.</p>
+        <p class="edu-note">TA across 3 courses (Data Science, Algorithms, Statistics); co-founded <strong>Ennovab</strong> and conducted AI/ML research at <strong>Next Tech Lab</strong>.</p>
       </div>
 
     </div>
@@ -869,27 +892,45 @@
     <ul class="cert-list">
       <li class="cert-item">
         <span class="cert-name">LLM Engineering: Master AI, Large Language Models &amp; Agents &mdash; Ed Donner via Udemy</span>
-        <span class="cert-meta">In Progress<span class="cert-active">Active</span></span>
+        <div class="cert-right">
+          <span class="cert-meta">In Progress</span>
+          <span class="cert-active">Active</span>
+        </div>
       </li>
       <li class="cert-item">
-        <a class="cert-name" href="https://www.linkedin.com/learning/certificates/01cf31ed91199be273b7199651a6aa32106d6f65afd24899ce53a2b6f6323220" target="_blank" rel="noopener">Power BI Data Analyst Associate (PL-300) &mdash; LinkedIn Learning</a>
-        <span class="cert-meta">Nov 2024</span>
+        <span class="cert-name">Power BI Data Analyst Associate (PL-300) &mdash; LinkedIn Learning</span>
+        <div class="cert-right">
+          <span class="cert-meta">Nov 2024</span>
+          <a class="cert-verify" href="https://www.linkedin.com/learning/certificates/01cf31ed91199be273b7199651a6aa32106d6f65afd24899ce53a2b6f6323220" target="_blank" rel="noopener">Verify</a>
+        </div>
       </li>
       <li class="cert-item">
-        <a class="cert-name" href="https://www.linkedin.com/learning/certificates/06b112e3f5b894a78638f6fe69ad919100f0e9358ef97c42c95404657bcf5298" target="_blank" rel="noopener">Master SQL for Data Science &mdash; LinkedIn Learning</a>
-        <span class="cert-meta">Nov 2024</span>
+        <span class="cert-name">Master SQL for Data Science &mdash; LinkedIn Learning</span>
+        <div class="cert-right">
+          <span class="cert-meta">Nov 2024</span>
+          <a class="cert-verify" href="https://www.linkedin.com/learning/certificates/06b112e3f5b894a78638f6fe69ad919100f0e9358ef97c42c95404657bcf5298" target="_blank" rel="noopener">Verify</a>
+        </div>
       </li>
       <li class="cert-item">
-        <a class="cert-name" href="https://www.scrum.org/certificates/665313" target="_blank" rel="noopener">Professional Scrum Master I (PSM I) &mdash; Scrum.org</a>
-        <span class="cert-meta">May 2021</span>
+        <span class="cert-name">Professional Scrum Master I (PSM I) &mdash; Scrum.org</span>
+        <div class="cert-right">
+          <span class="cert-meta">May 2021</span>
+          <a class="cert-verify" href="https://www.scrum.org/certificates/665313" target="_blank" rel="noopener">Verify</a>
+        </div>
       </li>
       <li class="cert-item">
-        <a class="cert-name" href="https://www.coursera.org/account/accomplishments/specialization/G2X28577D2NY" target="_blank" rel="noopener">Deep Learning Specialization &mdash; Coursera</a>
-        <span class="cert-meta">Oct 2019</span>
+        <span class="cert-name">Deep Learning Specialization &mdash; Coursera</span>
+        <div class="cert-right">
+          <span class="cert-meta">Oct 2019</span>
+          <a class="cert-verify" href="https://www.coursera.org/account/accomplishments/specialization/G2X28577D2NY" target="_blank" rel="noopener">Verify</a>
+        </div>
       </li>
       <li class="cert-item">
-        <a class="cert-name" href="https://www.coursera.org/account/accomplishments/specialization/S5AZ33M72SY4" target="_blank" rel="noopener">ML with TensorFlow on Google Cloud &mdash; Coursera</a>
-        <span class="cert-meta">Aug 2019</span>
+        <span class="cert-name">ML with TensorFlow on Google Cloud &mdash; Coursera</span>
+        <div class="cert-right">
+          <span class="cert-meta">Aug 2019</span>
+          <a class="cert-verify" href="https://www.coursera.org/account/accomplishments/specialization/S5AZ33M72SY4" target="_blank" rel="noopener">Verify</a>
+        </div>
       </li>
     </ul>
   </section>
